@@ -1,3 +1,47 @@
+/**
+ * @typedef {Object} IModelKV
+ * @property {number} id
+ * @property {string} nombre
+ * 
+ * @typedef {Object} ModelPelicula
+ * @property {number} id
+ * @property {string} nombre
+ * @property {number} anio
+ * @property {{
+ *      calle: string,
+ *      numero: number,
+ *      pais: string,
+ *  }} direccionSetFilmacion
+ * @property {Array<number>} directores
+ * @property {Array<number>} generos
+ * 
+ * @typedef {Object} ModelCritico
+ * @property {number} id
+ * @property {string} nombre
+ * @property {number} edad
+ * @property {number} pais
+ * 
+ * @typedef {Object} ModelCalificacion
+ * @property {number} critico
+ * @property {number} pelicula
+ * @property {number} puntuacion
+ * 
+ * @typedef {IModelKV} ModelDirector
+ * @typedef {IModelKV} ModelPais
+ * @typedef {IModelKV} ModelGenero
+ * 
+ * @typedef {Object} DB
+ * @property {Array<ModelPelicula>} peliculas
+ * @property {Array<ModelDirector>} directores
+ * @property {Array<ModelPais>} paises
+ * @property {Array<ModelGenero>} generos
+ * @property {Array<ModelCritico>} criticos
+ * @property {Array<ModelCalificacion>} calificaciones
+ */
+
+/**
+ * @type {DB}
+ */
 export const database = {
     peliculas: [
         {
